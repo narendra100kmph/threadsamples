@@ -72,7 +72,7 @@ public class ValutDemo {
         public void run() {
             for (int counter = 0; counter < bound; counter++)
                 if (vault.isPasswordCorrect(counter)) {
-                    System.out.println("hacker run :: " + this.getName());
+                    System.out.println("hacker run :: " + this.getName() +": guess the password"+ counter);
                     System.exit(0);
                 }
         }
@@ -88,7 +88,7 @@ public class ValutDemo {
         public void run() {
             for (int counter = bound; counter > bound; counter--)
                 if (vault.isPasswordCorrect(counter)) {
-                    System.out.println("hacker run  :: " + this.getName());
+                    System.out.println(new StringBuilder().append("hacker run  :: ").append(this.getName()).append(": guess the password").append(counter).toString());
                     System.exit(0);
                 }
         }
